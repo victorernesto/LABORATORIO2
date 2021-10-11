@@ -13,15 +13,26 @@ namespace LABORATORIO.NEGOCIO
     {
         public void GUARDADON(persona pers)
         {
-            if (pers.edadPersona < 18)
-            {
-                MessageBox.Show("LA PERSONA ES MENOR DE EDAD " +
-                    "\n NO SE PUEDE REGISTRAR");
-            }
-            else
+            
+
+            if (pers.edadPersona >= 18)
             {
                 guardar(pers);
+
             }
+            MessageBox.Show("es menor de edad");
+
+
+
+
         }
+           public List<persona> listafinal()
+        {
+            var list = listofDataofTablepersona();
+            return list;
+
+        }
+        
+        
     }
 }

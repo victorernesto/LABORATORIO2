@@ -21,6 +21,7 @@ namespace LABORATORIO.REPOSITORY
                     per.nombrePersona = persona.nombrePersona;
                     per.edadPersona = persona.edadPersona;
                     per.descripcionPersona = persona.descripcionPersona;
+                  
                     conexiombd.persona.Add(per);
                     conexiombd.SaveChanges();
                     MessageBox.Show("SE GUARDO CON EXITO");
@@ -31,8 +32,18 @@ namespace LABORATORIO.REPOSITORY
                 }
             }
 
+        }
 
+        public List<persona> listofDataofTablepersona()
+        {
+            using (almacendepersonasEntities conexiombd = new almacendepersonasEntities())
+            {
+                List<persona> lista = conexiombd.persona.ToList();
 
+                return lista;
+            }
+
+               
         }
     }
 }

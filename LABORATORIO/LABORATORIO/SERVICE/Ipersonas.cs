@@ -11,6 +11,8 @@ namespace LABORATORIO.SERVICE
     {
         void guardar(persona persona);
 
-       
+        List<persona> listofDataofTablepersona();
+
+
     }
 }

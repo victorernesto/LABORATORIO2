@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LABORATORIO.DATA;
+using LABORATORIO.NEGOCIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace LABORATORIO
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            persona prn = new persona();
+            prn.nombrePersona = txtnombre.Text;
+            prn.descripcionPersona = txtdescipcion.Text;
+            prn.edadPersona = int.Parse(txtedad.Text);
+            Clspersona clspersona = new Clspersona();
+            clspersona.GUARDADON(prn);
+            clspersona.guardar(prn);
         }
     }
 }
