@@ -10,5 +10,7 @@ namespace LABORATORIO.SERVICE
     interface Ipersonas
     {
         void guardar(persona persona);
+
+       
     }
 }
