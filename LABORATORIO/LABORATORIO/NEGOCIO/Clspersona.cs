@@ -11,27 +11,17 @@ namespace LABORATORIO.NEGOCIO
 {
     class Clspersona : ClsRpersona
     {
-        public void GUARDADON(persona pers)
+        public persona GUARDADON(persona pers)
         {
-            
-
-            if (pers.edadPersona >= 18)
-            {
-                guardar(pers);
-
-            }
-            MessageBox.Show("es menor de edad");
-
-
-
-
+            guardar(pers);
+            return null;
         }
            public List<persona> listafinal()
-        {
+            {
             var list = listofDataofTablepersona();
             return list;
 
-        }
+            }
         
         
     }

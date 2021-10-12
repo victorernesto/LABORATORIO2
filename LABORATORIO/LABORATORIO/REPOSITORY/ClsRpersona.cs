@@ -21,13 +21,21 @@ namespace LABORATORIO.REPOSITORY
                     per.nombrePersona = persona.nombrePersona;
                     per.edadPersona = persona.edadPersona;
                     per.descripcionPersona = persona.descripcionPersona;
-                  
-                    conexiombd.persona.Add(per);
-                    conexiombd.SaveChanges();
-                    MessageBox.Show("SE GUARDO CON EXITO");
+
+                    if (per.edadPersona >= 18)
+                    {
+                        conexiombd.persona.Add(per);
+                        conexiombd.SaveChanges();
+                        MessageBox.Show("SE GUARDO CON EXITO");
+                    }
+                    else
+                    {
+                        MessageBox.Show("NOSE PUEDE GUARDAR, POR QUE ES MENOR DE EDAD");
+                    }
                 }
                 catch (Exception ex)
                 {
+                  
                     MessageBox.Show("OCURRIO UN ERROR");
                 }
             }
