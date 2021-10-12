@@ -102,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VISTA\Frmpersona.resx">
+      <DependentUpon>Frmpersona.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="DATA\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

@@ -1,5 +1,6 @@
 ﻿using LABORATORIO.DATA;
 using LABORATORIO.NEGOCIO;
+using LABORATORIO.VISTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,17 @@ namespace LABORATORIO
             Clspersona clspersona = new Clspersona();
             clspersona.GUARDADON(prn);
             clspersona.guardar(prn);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frmpersona frmpersona = new Frmpersona();
+            frmpersona.Show();
+            
+
+
+         
+
         }
     }
 }
